@@ -1,3 +1,3 @@
 # codeplayer
 
-Simple "copy" of JSbin
+Simple "copy" of JSBin
