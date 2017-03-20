@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang='pl'>
+
+
+
+	<head>
+		<meta charset='utf-8'>
+		<title>CodePlayer</title>
+		<script type="text/javascript" src="jquery-3.1.1.min.js"> </script>
+		<link href="style.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
+		
+		
+
+	</head>
+
+
+
+	<body>
+	
+		<div id="header">
+		
+			<h2>CodePlayer</h2>
+			
+			<div id="buttonsContainer">
+				<div class="buttons" id="HTMLbutton">HTML</div>
+				<div class="buttons" id="CSSbutton">CSS</div>
+				<div class="buttons" id="Javascriptbutton">Javascript</div>
+				<div class="buttons" id="Outputbutton">Output</div>
+			</div>
+			
+			<div style="clear:both"></div>
+		
+		</div>
+		
+		<div id="panelsContainer">
+		
+			<textarea class="panels" type="text" id="panelHTML" placeholder="HTML"><p id="hello"> Hello World!</p></textarea>
+			<textarea class="panels" type="text" id="panelCSS" placeholder="CSS">p { font-weight: bold; }</textarea>
+			<textarea class="panels" type="text" id="panelJS" placeholder="Javascript">document.getElementById('hello').style.color = "blue"</textarea>
+			<iframe class="panels" id="panelOutput"></iframe>
+			
+		</div>
+		
+	<script>
+		
+		//buttons
+		
+		
+		$(".buttons").hover(function() {
+			$(this).css("cursor", "pointer");
+		});
+		
+		
+		$("#HTMLbutton").click(function() {
+			$(this).toggleClass("active");
+			$("#panelHTML").toggle();
+		
+			
+		});
+		
+			
+		$("#CSSbutton").click(function() {
+			$(this).toggleClass("active");
+			$("#panelCSS").toggle();
+		
+			
+		});
+		
+		$("#Javascriptbutton").click(function() {
+			$(this).toggleClass("active");
+			$("#panelJS").toggle();
+		
+			
+		});$("#Outputbutton").click(function() {
+			$(this).toggleClass("active");
+			$("#panelOutput").toggle();
+		
+			
+		});
+		
+		//output iframe
+		
+		function updateOutput() {
+					
+			$("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#panelCSS").val() + "</style></head><body>" + $("#panelHTML").val() + "</body></html>");
+			
+			document.getElementById("panelOutput").contentWindow.eval($("#panelJS").val());
+
+		}
+		  
+	
+            $("textarea").on('change keyup paste', function() {
+    
+                updateOutput();
+                
+                
+            });
+	</script>
+	</body>
+		
+	
+
+
+</html>

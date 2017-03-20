@@ -1,0 +1,106 @@
+html, body {
+	
+	margin: 0 auto;
+	height: 100%;
+	max-width: 100%;
+	
+
+}
+
+
+#header {
+	height: 60px;
+	background-color: #4b464c;
+	margin-top:0;
+
+		
+}
+h2 {
+	color:white;
+	font-size: 30px;
+	line-height: 60px;
+	width:150px;
+	font-family: 'Gochi Hand', cursive;
+	margin: 0 0 0 15px;
+	float:left;
+
+}
+
+#buttonsContainer{
+	
+	margin-left: 40%;
+    padding: 11px;
+	
+}
+
+.buttons {
+	
+	background-color: #bcb7b7;
+	float: left;
+	padding: 8px;
+	margin:0;
+	font-size:15px;
+	font-family: 'Bree Serif', serif;
+
+}
+
+
+#HTMLbutton {
+	border: 1px solid #5b5959;
+	border-top-left-radius: 7px;	
+	border-bottom-left-radius: 7px;	
+}
+#HTMLbutton.active {
+	
+	background-color: white;
+}
+#CSSbutton {
+	border: 1px solid #5b5959;
+	border-left: none;
+}
+#CSSbutton.active {
+	
+	background-color: white;
+}
+#Javascriptbutton.active {
+	
+	background-color: white;
+}
+#Javascriptbutton {
+	border: 1px solid #5b5959;
+	border-left: none;
+}
+#Outputbutton.active {
+	
+	background-color: white;
+}
+#Outputbutton {
+	border: 1px solid #5b5959;
+	border-top-right-radius: 7px;	
+	border-bottom-right-radius: 7px;	
+	border-left: none;
+}
+#panelsContainer{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	
+}
+.panels {
+	
+	height: 100%;
+	display: none;
+	padding: 0;
+	background-color: #f2f2f2;
+	border: none;
+	margin: 0;
+	resize: none;
+	font-size: 16px;
+	flex-grow: 1;
+	border: 1px solid #c9c9c9;
+}
+
+textarea:focus {
+	
+	background-color:white;
+}
