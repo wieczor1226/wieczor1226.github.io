@@ -1,3 +1,0 @@
-# codeplayer
-
-HTML, CSS, jQuery
