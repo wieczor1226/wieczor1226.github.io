@@ -91,7 +91,9 @@
 					
 			$("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#panelCSS").val() + "</style></head><body>" + $("#panelHTML").val() + 
 			"</body></html>");
-					document.getElementById("panelOutput").contentWindow.eval($("#panelJS").val());
+			
+			
+			document.getElementById("panelOutput").contentWindow.eval($("#panelJS").val());
 
 		}
 		   
