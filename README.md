@@ -1,1 +1,3 @@
 # codeplayer
+
+HTML, CSS, Jquery
