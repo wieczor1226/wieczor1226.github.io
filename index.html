@@ -50,18 +50,14 @@
 		//buttons
 		
 		
-		$(".buttons").hover(function() {
-			$(this).css("cursor", "pointer");
-		});
-		
 		
 		$("#HTMLbutton").click(function() {
 			$(this).toggleClass("active");
 			$("#panelHTML").toggle();
-		
-			
+	
 		});
-		
+
+			
 			
 		$("#CSSbutton").click(function() {
 			$(this).toggleClass("active");
@@ -99,6 +95,10 @@
                 
                 
             });
+			
+			document.onload(updateOutput());
+			
+			
 	</script>
 	</body>
 		
